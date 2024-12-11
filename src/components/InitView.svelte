@@ -53,8 +53,8 @@
         <div>
             <img id="logo" src="data/logo.png" alt="MIAPPE Wizard Logo" />
             <h1>Welcome to the MIAPPE Wizard</h1>
-            <p>A biologist-friendly application for creating MIAPPE-compliant metadata for plant phenotyping experiments.</p>
-            <button on:click|preventDefault={() => startWizardMode()}>Start Wizard mode</button> <br />
+            <!--<p>A biologist-friendly application for creating MIAPPE-compliant metadata for plant phenotyping experiments.</p>-->
+            <button on:click|preventDefault={() => startWizardMode()}>Start Questionnaire mode</button> <br />
             <button on:click|preventDefault={() => addInvestigation()}>Start Expert mode</button> <br />
             <button on:click|preventDefault={() => loadIsaFromJson()}>Load ISA-JSON from file</button>
         </div>

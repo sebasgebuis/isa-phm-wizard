@@ -201,10 +201,10 @@
 
 <header class="flex-container">
     <div class="flex-items" style="vertical-align: top;">
-        <img src="data/logo.png" alt="MIAPPE Wizard" />
+        <img src="data/logo.png" alt="ISA Wizard" />
         <!-- svelte-ignore a11y-click-events-have-key-events -->
         <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-        <h1 on:click={()=>{$appstate = appstate.INIT}}>MIAPPE Wizard</h1>
+        <h1 on:click={()=>{$appstate = appstate.INIT}}>ISA Wizard</h1>
     </div>
 
     <div class="flex-items">

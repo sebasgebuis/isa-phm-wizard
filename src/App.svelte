@@ -108,11 +108,11 @@ function showGui() {
             <Investigation bind:value={$isaObj} />
             {:else if $appstate === appstate.WIZARD}
             <GenericQuestionnaire on:closeWizard={() => {$appstate = appstate.GUI;}} />
-                {:else if $appstate === appstate.LEVEL}
-                <Forms />
-                {:else if $appstate === appstate.GUI}
-                <Gui />
-                {/if}
+            {:else if $appstate === appstate.LEVEL}
+            <Forms />
+            {:else if $appstate === appstate.GUI}
+            <Gui />
+            {/if}
                 
             </div>
             
