@@ -168,9 +168,9 @@ window.steps = [
             {
                 type: 'addProtocol',
                 parameters: {
-                    protocolName: 'ENA Plant Sample Checklist',
-                    protocolVersion: 'ENA_Plant_Sample_Checklist_1.0',
-                    protocolParameters: ['tax_id','scientific_name','sample_alias','sample_title','sample_description','collection date','plant developmental stage', 'plant structure', 'plant growth medium', 'isolation and growth condition','geographic location (latitude)', 'geographic location (longitude)', 'geographic location (country and/or sea)']
+                    protocolName: 'ENA Default Sample Checklist',
+                    protocolVersion: 'ENA_Default_Sample_Checklist_1.0',
+                    protocolParameters: ['tax_id','scientific_name','sample_alias','sample_title','sample_description','collection date', 'geographic location (country and/or sea)']
                 }
             }
         ],
@@ -178,7 +178,7 @@ window.steps = [
         title: 'Please select all Parameters, which are constant for all Samples of your Experiment.',
         component: 'ProtocolParametersSelect',
         componentConfig: {
-            protocolId: 'ena_plant_sample'
+            protocolId: 'ena_default_sample'
         },
         jsonPath: 'studies[0].protocols[0].parameters'
     },
