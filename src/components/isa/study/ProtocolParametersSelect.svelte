@@ -117,13 +117,15 @@ onMount(() => {
         <span>You have selected the following constant parameters:<br /></span>
         <table id="parameters-selected">
             <tr>
-                <th style="width: 350px;">Parameter</th>
+                <th style="width: 200px;">Parameter</th>
+                <th style="width: 300px; text-align: left;">Description</th>
                 <th>Value</th>
                 <th></th>
             </tr>
         {#each parameters as parameter}
         <tr>
             <td>{parameter.parameterName.annotationValue}</td>
+            <td>{parametersAvailable.find(param => param.label == parameter.parameterName.annotationValue).explanation}</td>
             <td><input type="text" style="width: 250px; text-align: center;" bind:value={parameterValues[parameter.parameterName.annotationValue]} on:change={() => update()} /></td>
             <td>
                 {#if parametersPredefined.includes(parameter.parameterName.annotationValue)}
