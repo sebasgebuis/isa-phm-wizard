@@ -199,7 +199,9 @@ window.steps = [
     {
         title: 'Please select all Parameters, which are constant for all Samples of your Experiment.',
         component: 'ProtocolParametersSelect',
-        protocolId: 'growth',
+        componentConfig: {
+            protocolId: 'growth'
+        },
         jsonPath: 'studies[0].protocols[0].parameters'
     },
     {
