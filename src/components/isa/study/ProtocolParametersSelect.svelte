@@ -1,6 +1,7 @@
 <script>
 export let value;
 export let jsonPath;
+export let componentConfig = {};
 
 import { onMount } from 'svelte';
 
@@ -12,12 +13,26 @@ import Schemas from '@/lib/schemas';
 import { config } from '@/stores/config';
 import { isaObj } from '@/stores/isa';
 
+import { keyBy } from '@/lib/utils';
+
 let parameters = [];
-let parametersAvailable = config.checklist.defaultProtocols[0].parameters;
 let parameterValues = {};
 let parametersPredefined = [];
 
 let selectedParameterNames = [];
+
+console.log(componentConfig);
+
+let parametersAvailable;
+if (componentConfig.protocolId) {
+    //label = componentConfig.label;
+    let allDefaultProtocols = keyBy(config.checklist.defaultProtocols, 'id');
+    console.log(allDefaultProtocols);
+    parametersAvailable = allDefaultProtocols[componentConfig.protocolId].parameters
+} else {
+    parametersAvailable = config.checklist.defaultProtocols[0].parameters
+}
+
 
 function addParameter(parameterName) {
     if (!selectedParameterNames.includes(parameterName)) {
@@ -37,6 +52,9 @@ function removeParameter(parameterName) {
 
     set($isaObj, jsonPath, parameters);
     $isaObj = $isaObj;
+
+    parameters = get($isaObj, jsonPath);
+    selectedParameterNames = parameters.map(o => o.parameterName.annotationValue);
 }
 
 function _getParameter(parameterName) {
@@ -121,7 +139,7 @@ onMount(() => {
     {/if}
 
 
-    {#if parametersAvailable.length > 0}
+    {#if parametersAvailable.filter(parameter => !selectedParameterNames.includes(parameter.label) ).length > 0}
     <div style="height: 400px; padding-right: 10px; overflow-y: scroll;">
         <table id="parameters-predefined">
             <tr>

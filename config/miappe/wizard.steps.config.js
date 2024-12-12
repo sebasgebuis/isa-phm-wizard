@@ -199,12 +199,31 @@ window.steps = [
     {
         title: 'Please select all Parameters, which are constant for all Samples of your Experiment.',
         component: 'ProtocolParametersSelect',
+        protocolId: 'growth',
         jsonPath: 'studies[0].protocols[0].parameters'
     },
     {
         title: 'Select Factors that are different between the Samples.',
         component: 'FactorsSelect',
         jsonPath: 'studies[0].factors'
+    },
+    {
+        hooks: [
+            {
+                type: 'addProtocol',
+                parameters: {
+                    protocolName: 'Phenotyping',
+                    protocolVersion: 'MIAPPE v1.1',
+                    protocolParameters: ['Phenotyping method']
+                }
+            }
+        ],
+        title: 'Please select all Parameters corresponding to your phenotyping.',
+        component: 'ProtocolParametersSelect',
+        componentConfig: {
+            protocolId: 'phenotyping'
+        },
+        jsonPath: 'studies[0].protocols[1].parameters'
     },
     {
         title: 'Upload template',

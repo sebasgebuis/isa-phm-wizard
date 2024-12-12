@@ -85,6 +85,7 @@ window.config = {
 
         "defaultProtocols": [
             {
+                "id": "growth",
                 "name": "Growth",
                 "parameters": [
                     { "label":"Growth facility", "explanation":"Type of growth facility in which the study was carried out" },
@@ -136,7 +137,12 @@ window.config = {
                 ]
             },
             {
-                "name": "Phenotyping"
+                "id": "phenotyping",
+                "name": "Phenotyping",
+                "parameters": [
+                    { "label": "Phenotyping method", "explanation": "The method that was used for phenotyping e.g. human bonitur" },
+                    { "label": "Phenotyping facility", "explanation": "Facility used for automatic plant phenotyping e.g. LemnaTec" },
+                ]
             }
         ]
     }
