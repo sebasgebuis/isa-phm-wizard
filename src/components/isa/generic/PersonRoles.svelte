@@ -4,32 +4,29 @@ let rolesAvailable = [];
 const mapAccessionToLabel = new Map();
 
 async function getCreditOntologyTerms() {
-    let apiurl = 'https://swate.nfdi4plants.org/api/IOntologyAPIv2/getTreeByAccession';
+    let apiurl = 'https://www.ebi.ac.uk/ols4/api/select?q=rol&ontology=CRO&rows=92';
 
     let response = await fetch(apiurl, {
-        method: 'POST',
+        method: 'GET',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(['CREDIT:00000000'])
     });
 
     let result = await response.json();
 
-    rolesAvailable = result['Nodes'].map(node => {
-        let accUrl = 'http://purl.obolibrary.org/obo/' + node.Term.Accession;
-        mapAccessionToLabel.set(accUrl, node.Term.Name);
+    rolesAvailable = result['response']['docs'].map(node=>{
+        let accUrl = 'http://purl.obolibrary.org/obo/' + node['obo_id'];
+        mapAccessionToLabel.set(accUrl, node['label']);
         return {
             accession: accUrl,
-            name: node.Term.Name,
-            description: node.Term.Description
+            name: node['label'],
+            description: node['description'][0]
         }
-    });
+    })
 
-    console.log(mapAccessionToLabel);
-
-    rolesAvailable = rolesAvailable.filter(role => !role.accession.includes('CREDIT:00000000'));
+    rolesAvailable = rolesAvailable.filter(role => role.accession.includes('CREDIT:'));
 }
 
 getCreditOntologyTerms();
