@@ -10,6 +10,24 @@ const isaLevel = getContext('isaLevel');
 const dispatch = createEventDispatcher();
 
 let explanationAction = explanationActionFactory(isaLevel);
+
+async function onChange() {
+    if (!publication.doi) {
+        publication.title = '';
+        publication.authorList = '';
+        return;
+    }
+    const response = await fetch('https://doi.org/' + publication.doi, {
+        headers: {
+            'Accept': 'application/vnd.citationstyles.csl+json'
+        }
+    });
+    const data = await response.json();
+    if (data) {
+        publication.title = data.title;
+        publication.authorList = data.author.map(a => a.given + ' ' + a.family).join(', ');
+    }
+}
 </script>
 
 <section>
@@ -21,7 +39,7 @@ let explanationAction = explanationActionFactory(isaLevel);
 
         <div class="pure-g">
             <div class="pure-u-1-2" style="padding-right: 15px;">
-                <input type="text" on:change use:explanationAction data-attr="doi" bind:value={publication.doi} placeholder="DOI">
+                <input type="text" on:change={onChange} use:explanationAction data-attr="doi" bind:value={publication.doi} placeholder="DOI">
             </div>
             <div class="pure-u-1-2">
                 <input type="text" on:change use:explanationAction data-attr="pubMedID" bind:value={publication.pubMedID} placeholder="PubMed ID">
