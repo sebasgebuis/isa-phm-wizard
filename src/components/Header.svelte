@@ -212,15 +212,15 @@
         {#if $appstate !== appstate.WIZARD}
         <!--<button on:click|preventDefault={() => loadISA()}>Load minimal example</button> -->
         <!--<button on:click|preventDefault={() => addInvestigation()}>Add new Investigation</button>-->
-        <button on:click|preventDefault={() => validateIsaJson()}>Validate ISA-JSON</button>
-        <button on:click|preventDefault={() => toArc()}>Convert to ARC</button>
-        <button on:click|preventDefault={() => saveIsaAsJson()}>Save ISA-JSON as file</button>
+        <!-- <button on:click|preventDefault={() => validateIsaJson()}>Validate ISA-JSON</button> -->
+        <!-- <button on:click|preventDefault={() => toArc()}>Convert to ARC</button> -->
+        <!-- <button on:click|preventDefault={() => saveIsaAsJson()}>Save ISA-JSON as file</button> -->
         <!--<button on:click|preventDefault={() => loadIsaFromJson()}>Load ISA-JSON from file</button>-->
-        <button on:click|preventDefault={() => startWizardMode()}>Start Wizard mode</button>
+        <!-- <button on:click|preventDefault={() => startWizardMode()}>Start Wizard mode</button> -->
         <!--<button on:click|preventDefault={() => sendToArc()}>Send JSON to ARC</button>-->
 
-        <button on:click|preventDefault={() => convertToIsaTabArchive()}>Convert to ISA-TAB</button>
-        <Login/>
+        <!-- <button on:click|preventDefault={() => convertToIsaTabArchive()}>Convert to ISA-TAB</button> -->
+        <!-- <Login/> -->
         {/if}
 
     </div>

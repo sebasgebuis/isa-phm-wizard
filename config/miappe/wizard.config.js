@@ -6,6 +6,37 @@ window.config = {
         showQuestionnaireProgressBar: true,
     },
 
+    export: [
+        {
+            type: 'arc',
+            label: 'ARC',
+            description: 'Export to ARC format.',
+        },
+        {
+            type: 'gitlab',
+            label: 'PLANTDataHUB',
+            description: 'Export to PLANTDataHUB.',
+            config: {
+                authentication: {
+                    method: 'code',
+                    client_id: '200490ccbc9bd9e9f65eb50dfc8aa68ca3ea2c6c5eee7f51874ea0f07d4b4ced',
+                    base_url: 'https://git.nfdi4plants.org',
+                    scope: 'api'
+                }
+            }
+        },
+        {
+            type: 'isa-json',
+            label: 'ISA-JSON',
+            description: 'Export to ISA-JSON.',
+        },
+        {
+            type: 'isa-tab',
+            label: 'ISA-Tab',
+            description: 'Export to ISA-Tab.',
+        }
+    ],
+
     prefill: [
         {
             type: 'person',

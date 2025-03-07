@@ -16,6 +16,7 @@ function startApp(containerId, params) {
 
     const config = {
         general: params.config?.general,
+        export: params.config?.export,
         checklist: params.config?.checklist,
         prefill: params.prefill,
         steps: params.steps,
