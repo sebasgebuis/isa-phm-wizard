@@ -34,6 +34,7 @@ import ProtocolParametersSelect from '../isa/study/ProtocolParametersSelect.svel
 import FactorsSelect from '../isa/study/FactorsSelect.svelte';
 import Uploader from '../isa/generic/Uploader.svelte';
 import LicensePicker from '../isa/generic/LicensePicker.svelte';
+import Location from '../isa/generic/Location.svelte';
 
 import FieldWrapperJsonPathNative from './wrappers/FieldWrapperJsonPathNative.svelte';
 import FieldWrapperJsonPathComment from './wrappers/FieldWrapperJsonPathComment.svelte';
@@ -45,6 +46,7 @@ const fieldTypes = {
     'date': Date,
     'ror': ResearchOrganizationRegistryPicker,
     'license': LicensePicker,
+    'location': Location
 }
 
 const components = {
@@ -54,7 +56,7 @@ const components = {
     'ProtocolParametersSelect': ProtocolParametersSelect,
     'FactorsSelect': FactorsSelect,
     'Uploader': Uploader,
-    'People': People
+    'People': People,
 }
 
 let steps = config.steps;

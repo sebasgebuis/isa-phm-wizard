@@ -87,7 +87,7 @@ window.steps = [
             },
             {
                 label: 'Location',
-                type: 'text',
+                type: 'location',
                 isaMapping: {
                     jsonPath: 'studies[0].comments',
                     commentName: 'Study Experimental Site'
