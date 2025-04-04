@@ -156,6 +156,9 @@ export async function createCommitFromArc(config, access_token, project, isaObj)
     for (let study of isaObj.studies) {
         for (let assay of study.assays) {
             for (let file of assay.dataFiles) {
+                if (file.comments.length === 0) {
+                    continue;
+                }
                 let df = new TextEncoder().encode(new DataFrame(JSON.parse(file.comments[0].value)).toCSV(true));
                 payload.actions.push({
                     "action": "create",

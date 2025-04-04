@@ -39,6 +39,13 @@ import Location from '../isa/generic/Location.svelte';
 import FieldWrapperJsonPathNative from './wrappers/FieldWrapperJsonPathNative.svelte';
 import FieldWrapperJsonPathComment from './wrappers/FieldWrapperJsonPathComment.svelte';
 import ComponentWrapperJsonPath from './wrappers/ComponentWrapperJsonPath.svelte';
+import StudyProcesses from '../isa/study/StudyProcesses.svelte';
+import Parameters from '../isa/study/Parameters.svelte';
+    import ProtocolComponents from '../isa/study/ProtocolComponents.svelte';
+    import OntologyAnnotation from '../isa/generic/OntologyAnnotation.svelte';
+    import OntologyPicker from '../isa/generic/OntologyPicker.svelte';
+    import AssayProcesses from '../isa/assay/AssayProcesses.svelte';
+    import TextSelect from '../isa/generic/TextSelect.svelte';
 
 const fieldTypes = {
     'text': String,
@@ -46,7 +53,11 @@ const fieldTypes = {
     'date': Date,
     'ror': ResearchOrganizationRegistryPicker,
     'license': LicensePicker,
-    'location': Location
+    'location': Location,
+    'parameters': Parameters,
+    'components': ProtocolComponents,
+    'ontology_annotation': OntologyAnnotation,
+    'text-select': TextSelect,
 }
 
 const components = {
@@ -57,6 +68,9 @@ const components = {
     'FactorsSelect': FactorsSelect,
     'Uploader': Uploader,
     'People': People,
+    'StudyProcesses': StudyProcesses,
+    'AssayProcesses': AssayProcesses,
+    'OntologyPicker': OntologyPicker,
 }
 
 let steps = config.steps;
@@ -69,7 +83,8 @@ let currentStep = 0;
 
 const hooks = {
     'addStudy': addStudy,
-    'addProtocol': addProtocol
+    'addProtocol': addProtocol,
+    'addAssay': addAssay,
 }
 
 function addStudy() {
@@ -77,7 +92,12 @@ function addStudy() {
     $isaObj['studies'] = [ ...$isaObj['studies'], emptyStudy];
 }
 
-function addProtocol(params) {
+function addAssay() {
+    let emptyAssay = Schemas.getObjectFromSchema('assay');
+    $isaObj['studies'][0]['assays'] = [ ...$isaObj['studies'][0]['assays'], emptyAssay];
+}
+
+async function addProtocol(params) {
     if (!params) {
         alert('Error: Using the addProtocol hook without parameters is not allowed. Please correct the steps configuration!');
         return false;
@@ -85,15 +105,15 @@ function addProtocol(params) {
     let emptyProtocol = Schemas.getObjectFromSchema('protocol');
     emptyProtocol.protocolType = Schemas.getObjectFromSchema('ontology_annotation');
     
-    emptyProtocol.name = params?.protocolName;
-    emptyProtocol.description = params?.protocolDescription;
-    emptyProtocol.version = params?.protocolVersion;
+    emptyProtocol.name = params?.protocolName? params.protocolName : '';
+    emptyProtocol.description = params?.protocolDescription? params.protocolDescription : '';
+    emptyProtocol.version = params?.protocolVersion? params.protocolVersion : '';
+    emptyProtocol.protocolType= params?.protocolType?? params.protocolType;
     
     if (params.protocolParameters !== undefined) {
         for (let parameterName of params.protocolParameters) {
             let emptyParameter = Schemas.getObjectFromSchema('protocol_parameter');
-            emptyParameter.parameterName = Schemas.getObjectFromSchema('ontology_annotation');
-            emptyParameter.parameterName.annotationValue = parameterName;
+            emptyParameter.parameterName = parameterName;
             
             let comment = Schemas.getObjectFromSchema('comment');
             comment.name = 'value';
@@ -104,6 +124,12 @@ function addProtocol(params) {
             commentDeleteable.name = 'deletable';
             commentDeleteable.value = 'false';
             emptyParameter.comments = [...emptyParameter.comments, commentDeleteable];
+
+            let commentUnit = Schemas.getObjectFromSchema('comment');
+            commentUnit.name = 'unit';
+            commentUnit.value = Schemas.getObjectFromSchema('ontology_annotation');
+            commentUnit.value.annotationValue = '';
+            emptyParameter.comments = [...emptyParameter.comments, commentUnit];
             
             emptyProtocol.parameters = [...emptyProtocol.parameters, emptyParameter];
         }

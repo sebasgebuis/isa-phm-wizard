@@ -1,5 +1,6 @@
 <script>
-export let protocol;
+let protocol;
+export {protocol as value};
 
 import String from "../generic/String.svelte";
 import Textarea from "../generic/Textarea.svelte";

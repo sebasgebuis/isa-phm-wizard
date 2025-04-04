@@ -32,21 +32,7 @@
         "components": {
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "componentName": {
-                        "type": "string"
-                    },
-                    "componentType": {
-                        "$ref": "ontology_annotation_schema.json#"
-                    },
-                    "comments" : {
-                        "type": "array",
-                        "items": {
-                             "$ref": "comment_schema.json#"
-                        }
-                    }
-                }
+                "ref": "protocol_component_schema.json#"
             }
         },
         "comments" : {

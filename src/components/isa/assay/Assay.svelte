@@ -61,7 +61,7 @@
         <String bind:value={assay.filename} attr="filename"/>
         <String bind:value={assay.title} attr="Assay Title"/>
         <!-- <input type="text" use:explanationAction data-attr="title" bind:value={assay.title} placeholder="Assay title"> -->
-        <TableLoader templatePath={"data/templates/uploads/breedfides_assay.csv"} on:approve={handleApprove}/>
+        <TableLoader template={"data/templates/uploads/breedfides_assay.csv"} on:approve={handleApprove}/>
         Number of samples: {assay.materials.samples.length}
         <Comments bind:value={assay.comments} />
     </div>

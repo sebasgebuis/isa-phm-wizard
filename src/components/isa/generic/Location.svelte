@@ -25,7 +25,7 @@
     }
     async function geocode() {
         // For development purposes, switch to self-hosted version of nominatim
-        let response = await fetch(`https://nominatim.openstreetmap.org//search?q=${location}&format=jsonv2`);
+        let response = await fetch(`https://plant-commons.ipk-gatersleben.de//search?q=${location}&format=jsonv2`);
         let data = await response.json();
         if (data.length > 0) {
             //TODO: Placement of the coordinates in the ISA object is hardcoded
@@ -46,7 +46,7 @@
             {/if}
         </div>
         <div class="pure-u-19-24 v-center container">
-            <input style="width: 100%;" class:wide={!showLabel} use:explanationAction use:setFocus data-isaLevel={isaLevel} data-attr={attr} type="text" bind:value={location} on:change />
+            <input style="width: 100%;" class:wide={!showLabel} use:explanationAction data-isaLevel={isaLevel} data-attr={attr} type="text" bind:value={location} on:change />
             {#if location}
             <button class="btn" title="Geocode" style="height: 40px; border-radius: 0px;" on:click={geocode}>
                 <svg fill='#fff' height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 425.515 425.515" xml:space="preserve">

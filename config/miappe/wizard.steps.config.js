@@ -10,14 +10,6 @@ window.steps = [
         title: 'Please provide the basic information of your Plant Phenotyping Project and when you submitted and published the Dataset.',
         fields: [
             {
-                label: 'Project ID',
-                type: 'text',
-                isaMapping: {
-                    jsonPath: 'identifier'
-                },
-                explanation: 'DM-2'
-            },
-            {
                 label: 'Project Title',
                 type: 'text',
                 isaMapping: {
@@ -70,6 +62,12 @@ window.steps = [
         }
     },
     {
+        title: 'Here you can provide publications related to your experiment.',
+        level: 'Investigation',
+        component: 'Publications',
+        jsonPath: 'publications'
+    },
+    {
         hooks: [
             {
                 type: 'addStudy'
@@ -78,7 +76,7 @@ window.steps = [
         title: 'Please provide the Title and Location of your Study',
         fields: [
             {
-                label: 'Study title',
+                label: 'Study Title',
                 type: 'text',
                 isaMapping: {
                     jsonPath: 'studies[0].title'
@@ -113,19 +111,13 @@ window.steps = [
                 explanation: 'DM-20'
             },
             {
-                label: 'Country',
-                type: 'text',
+                label: 'ROR ID of your Institution',
+                type: 'ror',
                 isaMapping: {
                     jsonPath: 'studies[0].comments',
-                    commentName: 'Study Country'
-                },
-                explanation: 'DM-17'
-            }
-        ]
-    },
-    {
-        title: 'Please provide the responsible Institution of your Study',
-        fields: [
+                    commentName: 'Study Contact Institution ROR'
+                }
+            },
             {
                 label: 'Institution Contact Address',
                 type: 'text',
@@ -136,42 +128,16 @@ window.steps = [
                 explanation: 'DM-16'
             },
             {
-                label: 'ROR ID of your Institution',
-                type: 'ror',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Contact Institution ROR'
-                }
-            }
-        ]
-    },
-    {
-        title: 'Here you can provide publications related to your experiment.',
-        level: 'Study',
-        component: 'Publications',
-        jsonPath: 'studies[0].publications'
-    },
-    {
-        title: 'Please provide a link to the data file of the study.',
-        fields: [
-            {
-                label: 'Study Data File Link',
+                label: 'Country',
                 type: 'text',
                 isaMapping: {
                     jsonPath: 'studies[0].comments',
-                    commentName: 'Study Data File Link'
-                }
-            },
-            {
-                label: 'Study Data File Description',
-                type: 'textarea',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Data File Description'
-                }
+                    commentName: 'Study Country'
+                },
+                explanation: 'DM-17'
             }
         ]
-    },
+    },    
     {
         hooks: [
             {
@@ -179,8 +145,35 @@ window.steps = [
                 parameters: {
                     protocolName: 'Growth',
                     protocolVersion: 'MIAPPE v1.1',
-                   // protocolDescription: 'How the plants were grown up.',
-                    protocolParameters: ['Light intensity', 'Air temperature']
+                    protocolType: {
+                        "@id": "",
+                        "annotationValue": "plant growth protocol",
+                        "termSource": "DPBO",
+                        "termAccession": "DPBO:1000164",
+                        "comments": []
+                      },
+                    // protocolDescription: 'How the plants were grown up.',
+                    protocolParameters: [ 
+                        {
+                            "@id": "",
+                            "annotationValue": "Light intensity",
+                            "termSource": "MIAPPE",
+                            "termAccession": "MIAPPE:0101",
+                            "comments": []
+                        }, {
+                            "@id": "",
+                            "annotationValue": "temperature day",
+                            "termSource": "DPBO",
+                            "termAccession": "DPBO:0000007",
+                            "comments": []
+                        },{
+                            "@id": "",
+                            "annotationValue": "temperature night",
+                            "termSource": "DPBO",
+                            "termAccession": "DPBO:0000008",
+                            "comments": []
+                        }
+                    ]
                 }
             }
         ],
@@ -193,21 +186,86 @@ window.steps = [
                     jsonPath: 'studies[0].protocols[0].description'
                 },
                 explanation: 'DM-67'
+            },
+            {
+                label: 'Protocol URI',
+                type: 'text',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[0].uri'
+                },
+                explanation: 'DM-66'
+            },
+            {
+                label: 'Protocol Parameters',
+                type: 'parameters',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[0].parameters'
+                },
+                explanation: 'DM-68'
+            },
+            {
+                label: 'Protocol Components',
+                type: 'components',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[0].components'
+                },
+                explanation: 'DM-69'
             }
         ]
     },
     {
-        title: 'Please select all Parameters, which are constant for all Samples of your Experiment.',
-        component: 'ProtocolParametersSelect',
+        title: 'Please upload the Material used in your Study.',
+        component: 'StudyProcesses',
+        level: 'Study',
+        jsonPath: 'studies[0]',
         componentConfig: {
-            protocolId: 'growth'
-        },
-        jsonPath: 'studies[0].protocols[0].parameters'
+
+        }
     },
     {
-        title: 'Select Factors that are different between the Samples.',
-        component: 'FactorsSelect',
-        jsonPath: 'studies[0].factors'
+        hooks: [
+            {
+                type: 'addAssay',
+                parameters: {
+                    
+                }
+            }
+        ],
+        title: 'Please provide the information on the experiments of your Study.',
+        fields: [
+            {
+                label: 'Experiment Title',
+                type: 'text',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].comments',
+                    commentName: 'Title'
+                }
+            },
+            {
+                label: 'Measurement Type',
+                type: 'ontology_annotation',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].measurementType'
+                },
+            },
+            {
+                label: 'Technology Type',
+                type: 'ontology_annotation',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].technologyType'
+                },
+            },
+            {
+                label: 'Technology Platform',
+                type: 'text-select',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].technologyPlatform'
+                },
+                componentConfig: {
+                    options: ['Lemna-Tec', 'PhenoSphere', 'Field', 'Greenhouse']
+                }
+            }
+        ]
     },
     {
         hooks: [
@@ -216,20 +274,60 @@ window.steps = [
                 parameters: {
                     protocolName: 'Phenotyping',
                     protocolVersion: 'MIAPPE v1.1',
-                    protocolParameters: ['Phenotyping method']
+                    protocolType: {
+                        "@id": "",
+                        "annotationValue": "phenotyping",
+                        "termSource": "DPBO",
+                        "termAccession": "DPBO:1000224",
+                        "comments": []
+                      },
+                    // protocolParameters: ['Phenotyping method']
                 }
             }
         ],
         title: 'Please select all Parameters corresponding to your phenotyping.',
-        component: 'ProtocolParametersSelect',
-        componentConfig: {
-            protocolId: 'phenotyping'
-        },
-        jsonPath: 'studies[0].protocols[1].parameters'
+        fields: [
+            {
+                label: 'Phenotyping description',
+                type: 'textarea',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[1].description'
+                },
+                explanation: 'DM-67'
+            },
+            {
+                label: 'Protocol URI',
+                type: 'text',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[1].uri'
+                },
+                explanation: 'DM-66'
+            },
+            {
+                label: 'Protocol Parameters',
+                type: 'parameters',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[1].parameters'
+                },
+                explanation: 'DM-68'
+            },
+            {
+                label: 'Protocol Components',
+                type: 'components',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[1].components'
+                },
+                explanation: 'DM-69'
+            }
+        ]
     },
     {
-        title: 'Upload template',
-        component: 'Uploader',
-        jsonPath: 'studies[0]'
+        title: 'Please upload the results of your Study.',
+        component: 'AssayProcesses',
+        level: 'Assay',
+        jsonPath: 'studies[0].assays[0]',
+        componentConfig: {
+
+        }
     }
 ];
