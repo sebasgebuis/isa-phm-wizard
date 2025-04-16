@@ -1,1637 +1,1419 @@
 {
-    "@id": "",
-    "filename": "",
-    "identifier": "",
-    "title": "",
-    "description": "",
-    "submissionDate": "",
-    "publicReleaseDate": "",
-    "ontologySourceReferences": [],
-    "publications": [],
-    "people": [],
-    "studies": [
-      {
-        "@id": "",
-        "filename": "studies/test/isa.study.xlsx",
-        "identifier": "",
-        "title": "test",
-        "description": "",
-        "submissionDate": "",
-        "publicReleaseDate": "",
-        "publications": [],
-        "people": [],
-        "studyDesignDescriptors": [],
-        "protocols": [
+  "@id": "",
+  "filename": "",
+  "identifier": "",
+  "title": "Adaptation of Maize to Temperate Climates",
+  "description": "The migration of maize from tropical to temperate climates was accompanied by a dramatic evolution in flowering time.",
+  "submissionDate": "2025-04-16",
+  "publicReleaseDate": "2025-05-02",
+  "ontologySourceReferences": [],
+  "publications": [
+    {
+      "comments": [],
+      "pubMedID": "",
+      "doi": "10.5281/zenodo.13740519",
+      "authorList": "Manuel Feser, Sebastian Raubach",
+      "title": "Connecting Dots: Creating a Bridge Between Phenotypic Data Collection Tools and ARC using BrAPI",
+      "status": {}
+    }
+  ],
+  "people": [
+    {
+      "@id": "",
+      "lastName": "Feser",
+      "firstName": "Manuel",
+      "midInitials": "",
+      "email": "feser@ipk-gatersleben.de",
+      "phone": "696",
+      "fax": "7890",
+      "address": "Corrensstraße 3, 06646 Seeland",
+      "affiliation": "IPK Gatersleben",
+      "roles": [
+        {
+          "@id": "",
+          "annotationValue": "software role",
+          "termSource": "CREDIT",
+          "termAccession": "http://purl.obolibrary.org/obo/CREDIT:00000009",
+          "comments": []
+        },
+        {
+          "@id": "",
+          "annotationValue": "data curation role",
+          "termSource": "CREDIT",
+          "termAccession": "http://purl.obolibrary.org/obo/CREDIT:00000002",
+          "comments": []
+        }
+      ],
+      "comments": [
+        {
+          "name": "Person ID",
+          "value": "https://orcid.org/0000-0001-6546-1818"
+        }
+      ]
+    }
+  ],
+  "studies": [
+    {
+      "@id": "",
+      "filename": "",
+      "identifier": "",
+      "title": "2002 evaluation of flowering time ",
+      "description": "",
+      "submissionDate": "",
+      "publicReleaseDate": "",
+      "publications": [],
+      "people": [],
+      "studyDesignDescriptors": [],
+      "protocols": [
+        {
+          "@id": "",
+          "name": "Growth",
+          "protocolType": {
+            "@id": "",
+            "annotationValue": "plant growth protocol",
+            "termSource": "DPBO",
+            "termAccession": "DPBO:1000164",
+            "comments": []
+          },
+          "description": "The plants were grown in a Lemna-Tec greenhouse under constant conditions.",
+          "uri": "",
+          "version": "MIAPPE v1.1",
+          "parameters": [
+            {
+              "@id": "",
+              "parameterName": {
+                "@id": "",
+                "annotationValue": "Light intensity",
+                "termSource": "MIAPPE",
+                "termAccession": "MIAPPE:0101",
+                "comments": []
+              },
+              "comments": [
+                {
+                  "@id": "",
+                  "name": "value",
+                  "value": "100"
+                },
+                {
+                  "@id": "",
+                  "name": "deletable",
+                  "value": "false"
+                },
+                {
+                  "@id": "",
+                  "name": "unit",
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "microeinstein per square meter per second",
+                    "termSource": "UO",
+                    "termAccession": "UO:0000160",
+                    "comments": []
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "",
+              "parameterName": {
+                "@id": "",
+                "annotationValue": "temperature day",
+                "termSource": "DPBO",
+                "termAccession": "DPBO:0000007",
+                "comments": []
+              },
+              "comments": [
+                {
+                  "@id": "",
+                  "name": "value",
+                  "value": "25"
+                },
+                {
+                  "@id": "",
+                  "name": "deletable",
+                  "value": "false"
+                },
+                {
+                  "@id": "",
+                  "name": "unit",
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "degree celsius",
+                    "termSource": "UO",
+                    "termAccession": "UO:0000027",
+                    "comments": []
+                  }
+                }
+              ]
+            },
+            {
+              "@id": "",
+              "parameterName": {
+                "@id": "",
+                "annotationValue": "temperature night",
+                "termSource": "DPBO",
+                "termAccession": "DPBO:0000008",
+                "comments": []
+              },
+              "comments": [
+                {
+                  "@id": "",
+                  "name": "value",
+                  "value": "15"
+                },
+                {
+                  "@id": "",
+                  "name": "deletable",
+                  "value": "false"
+                },
+                {
+                  "@id": "",
+                  "name": "unit",
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "degree celsius",
+                    "termSource": "UO",
+                    "termAccession": "UO:0000027",
+                    "comments": []
+                  }
+                }
+              ]
+            }
+          ],
+          "components": [],
+          "comments": []
+        },
+        {
+          "@id": "",
+          "name": "Phenotyping",
+          "protocolType": {
+            "@id": "",
+            "annotationValue": "phenotyping",
+            "termSource": "DPBO",
+            "termAccession": "DPBO:1000224",
+            "comments": []
+          },
+          "description": "The plants were phenotyped in a Lemna-Tec greenhouse",
+          "uri": "",
+          "version": "MIAPPE v1.1",
+          "parameters": [
+            {
+              "@id": "",
+              "parameterName": {
+                "@id": "",
+                "annotationValue": "camera angle",
+                "termSource": "",
+                "termAccession": "",
+                "comments": []
+              },
+              "comments": [
+                {
+                  "@id": "",
+                  "name": "value",
+                  "value": "90"
+                },
+                {
+                  "@id": "",
+                  "name": "unit",
+                  "value": {
+                    "@id": "",
+                    "annotationValue": "degree",
+                    "termSource": "UO",
+                    "termAccession": "UO:0000185",
+                    "comments": []
+                  }
+                }
+              ]
+            }
+          ],
+          "components": [
+            {
+              "componentName": "RGB-Camera",
+              "componentType": {
+                "annotationValue": "Camera Device",
+                "termSource": "NCIT",
+                "termAccession": "NCIT:C49858"
+              },
+              "comments": []
+            }
+          ],
+          "comments": []
+        }
+      ],
+      "materials": {
+        "sources": [
           {
             "@id": "",
-            "name": "Breedfides Growth",
-            "description": "",
+            "name": "Genotype_A",
+            "characteristics": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "characteristicType": {
+                    "@id": "",
+                    "annotationValue": "Organism",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0041",
+                    "comments": []
+                  }
+                },
+                "unit": null,
+                "value": "Zea mays"
+              }
+            ]
+          },
+          {
+            "@id": "",
+            "name": "Genotype_B",
+            "characteristics": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "characteristicType": {
+                    "@id": "",
+                    "annotationValue": "Organism",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0041",
+                    "comments": []
+                  }
+                },
+                "unit": null,
+                "value": "Zea mays"
+              }
+            ]
+          },
+          {
+            "@id": "",
+            "name": "Genotype_C",
+            "characteristics": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "characteristicType": {
+                    "@id": "",
+                    "annotationValue": "Organism",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0041",
+                    "comments": []
+                  }
+                },
+                "unit": null,
+                "value": "Zea mays"
+              }
+            ]
+          }
+        ],
+        "samples": [
+          {
+            "@id": "",
+            "name": "Sample_1",
+            "characteristics": [],
+            "factorValues": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Fertilizer regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Fertilizer regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0149",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "High"
+              },
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Watering regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Watering regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0161",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "NORMAL"
+              }
+            ],
+            "derivesFrom": []
+          },
+          {
+            "@id": "",
+            "name": "Sample_2",
+            "characteristics": [],
+            "factorValues": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Fertilizer regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Fertilizer regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0149",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "Low"
+              },
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Watering regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Watering regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0161",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "NORMAL"
+              }
+            ],
+            "derivesFrom": []
+          },
+          {
+            "@id": "",
+            "name": "Sample_3",
+            "characteristics": [],
+            "factorValues": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Fertilizer regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Fertilizer regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0149",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "High"
+              },
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Watering regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Watering regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0161",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "DROUGHT"
+              }
+            ],
+            "derivesFrom": []
+          },
+          {
+            "@id": "",
+            "name": "Sample_4",
+            "characteristics": [],
+            "factorValues": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Fertilizer regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Fertilizer regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0149",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "Low"
+              },
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Watering regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Watering regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0161",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "DROUGHT"
+              }
+            ],
+            "derivesFrom": []
+          },
+          {
+            "@id": "",
+            "name": "Sample_5",
+            "characteristics": [],
+            "factorValues": [
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Fertilizer regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Fertilizer regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0149",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "Medium"
+              },
+              {
+                "@id": "",
+                "category": {
+                  "@id": "",
+                  "factorName": "Watering regime",
+                  "factorType": {
+                    "@id": "",
+                    "annotationValue": "Watering regime",
+                    "termSource": "MIAPPE",
+                    "termAccession": "MIAPPE:0161",
+                    "comments": []
+                  },
+                  "comments": []
+                },
+                "unit": {},
+                "comments": [],
+                "value": "NORMAL"
+              }
+            ],
+            "derivesFrom": []
+          }
+        ],
+        "otherMaterials": []
+      },
+      "processSequence": [
+        {
+          "@id": "",
+          "name": "Growth",
+          "executesProtocol": {
+            "@id": "",
+            "name": "Growth",
+            "protocolType": {
+              "@id": "",
+              "annotationValue": "plant growth protocol",
+              "termSource": "DPBO",
+              "termAccession": "DPBO:1000164",
+              "comments": []
+            },
+            "description": "The plants were grown in a Lemna-Tec greenhouse under constant conditions.",
             "uri": "",
-            "version": "",
+            "version": "MIAPPE v1.1",
             "parameters": [
               {
                 "@id": "",
-                "comments": [],
                 "parameterName": {
                   "@id": "",
-                  "annotationValue": "Year",
-                  "termSource": "",
-                  "termAccession": "",
+                  "annotationValue": "Light intensity",
+                  "termSource": "MIAPPE",
+                  "termAccession": "MIAPPE:0101",
                   "comments": []
-                }
+                },
+                "comments": [
+                  {
+                    "@id": "",
+                    "name": "value",
+                    "value": "100"
+                  },
+                  {
+                    "@id": "",
+                    "name": "deletable",
+                    "value": "false"
+                  },
+                  {
+                    "@id": "",
+                    "name": "unit",
+                    "value": {
+                      "@id": "",
+                      "annotationValue": "microeinstein per square meter per second",
+                      "termSource": "UO",
+                      "termAccession": "UO:0000160",
+                      "comments": []
+                    }
+                  }
+                ]
               },
               {
                 "@id": "",
-                "comments": [],
                 "parameterName": {
                   "@id": "",
-                  "annotationValue": "Location",
-                  "termSource": "",
-                  "termAccession": "",
+                  "annotationValue": "temperature day",
+                  "termSource": "DPBO",
+                  "termAccession": "DPBO:0000007",
                   "comments": []
-                }
+                },
+                "comments": [
+                  {
+                    "@id": "",
+                    "name": "value",
+                    "value": "25"
+                  },
+                  {
+                    "@id": "",
+                    "name": "deletable",
+                    "value": "false"
+                  },
+                  {
+                    "@id": "",
+                    "name": "unit",
+                    "value": {
+                      "@id": "",
+                      "annotationValue": "degree celsius",
+                      "termSource": "UO",
+                      "termAccession": "UO:0000027",
+                      "comments": []
+                    }
+                  }
+                ]
               },
               {
                 "@id": "",
-                "comments": [],
                 "parameterName": {
                   "@id": "",
-                  "annotationValue": "Repetition",
-                  "termSource": "",
-                  "termAccession": "",
+                  "annotationValue": "temperature night",
+                  "termSource": "DPBO",
+                  "termAccession": "DPBO:0000008",
                   "comments": []
-                }
-              },
-              {
-                "@id": "",
-                "comments": [],
-                "parameterName": {
-                  "@id": "",
-                  "annotationValue": "Block",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
+                },
+                "comments": [
+                  {
+                    "@id": "",
+                    "name": "value",
+                    "value": "15"
+                  },
+                  {
+                    "@id": "",
+                    "name": "deletable",
+                    "value": "false"
+                  },
+                  {
+                    "@id": "",
+                    "name": "unit",
+                    "value": {
+                      "@id": "",
+                      "annotationValue": "degree celsius",
+                      "termSource": "UO",
+                      "termAccession": "UO:0000027",
+                      "comments": []
+                    }
+                  }
+                ]
               }
             ],
             "components": [],
             "comments": []
-          }
-        ],
-        "materials": {
-          "sources": [
+          },
+          "parameterValues": [
+            {
+              "category": {
+                "@id": "",
+                "parameterName": {
+                  "@id": "",
+                  "annotationValue": "Light intensity",
+                  "termSource": "MIAPPE",
+                  "termAccession": "MIAPPE:0101",
+                  "comments": []
+                },
+                "comments": [
+                  {
+                    "@id": "",
+                    "name": "value",
+                    "value": "100"
+                  },
+                  {
+                    "@id": "",
+                    "name": "deletable",
+                    "value": "false"
+                  },
+                  {
+                    "@id": "",
+                    "name": "unit",
+                    "value": {
+                      "@id": "",
+                      "annotationValue": "microeinstein per square meter per second",
+                      "termSource": "UO",
+                      "termAccession": "UO:0000160",
+                      "comments": []
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "@id": "",
+                "annotationValue": "microeinstein per square meter per second",
+                "termSource": "UO",
+                "termAccession": "UO:0000160",
+                "comments": []
+              },
+              "value": "100"
+            },
+            {
+              "category": {
+                "@id": "",
+                "parameterName": {
+                  "@id": "",
+                  "annotationValue": "temperature day",
+                  "termSource": "DPBO",
+                  "termAccession": "DPBO:0000007",
+                  "comments": []
+                },
+                "comments": [
+                  {
+                    "@id": "",
+                    "name": "value",
+                    "value": "25"
+                  },
+                  {
+                    "@id": "",
+                    "name": "deletable",
+                    "value": "false"
+                  },
+                  {
+                    "@id": "",
+                    "name": "unit",
+                    "value": {
+                      "@id": "",
+                      "annotationValue": "degree celsius",
+                      "termSource": "UO",
+                      "termAccession": "UO:0000027",
+                      "comments": []
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "@id": "",
+                "annotationValue": "degree celsius",
+                "termSource": "UO",
+                "termAccession": "UO:0000027",
+                "comments": []
+              },
+              "value": "25"
+            },
+            {
+              "category": {
+                "@id": "",
+                "parameterName": {
+                  "@id": "",
+                  "annotationValue": "temperature night",
+                  "termSource": "DPBO",
+                  "termAccession": "DPBO:0000008",
+                  "comments": []
+                },
+                "comments": [
+                  {
+                    "@id": "",
+                    "name": "value",
+                    "value": "15"
+                  },
+                  {
+                    "@id": "",
+                    "name": "deletable",
+                    "value": "false"
+                  },
+                  {
+                    "@id": "",
+                    "name": "unit",
+                    "value": {
+                      "@id": "",
+                      "annotationValue": "degree celsius",
+                      "termSource": "UO",
+                      "termAccession": "UO:0000027",
+                      "comments": []
+                    }
+                  }
+                ]
+              },
+              "unit": {
+                "@id": "",
+                "annotationValue": "degree celsius",
+                "termSource": "UO",
+                "termAccession": "UO:0000027",
+                "comments": []
+              },
+              "value": "15"
+            }
+          ],
+          "performer": "",
+          "date": "",
+          "previousProcess": {},
+          "nextProcess": {},
+          "inputs": [
             {
               "@id": "",
+              "name": "Genotype_A",
               "characteristics": [
                 {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "48.1333333333333",
-                  "Biological_material_longitude": "1.13333333333333",
-                  "Variety_name": "Actros"
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "characteristicType": {
+                      "@id": "",
+                      "annotationValue": "Organism",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0041",
+                      "comments": []
+                    }
+                  },
+                  "unit": null,
+                  "value": "Zea mays"
                 }
               ]
             },
             {
               "@id": "",
+              "name": "Genotype_A",
               "characteristics": [
                 {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "50.5",
-                  "Biological_material_longitude": "3.83333333333333",
-                  "Variety_name": "Actros"
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "characteristicType": {
+                      "@id": "",
+                      "annotationValue": "Organism",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0041",
+                      "comments": []
+                    }
+                  },
+                  "unit": null,
+                  "value": "Zea mays"
                 }
               ]
             },
             {
               "@id": "",
+              "name": "Genotype_B",
               "characteristics": [
                 {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "50",
-                  "Biological_material_longitude": "8.15",
-                  "Variety_name": "Actros"
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "characteristicType": {
+                      "@id": "",
+                      "annotationValue": "Organism",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0041",
+                      "comments": []
+                    }
+                  },
+                  "unit": null,
+                  "value": "Zea mays"
                 }
               ]
             },
             {
               "@id": "",
+              "name": "Genotype_B",
               "characteristics": [
                 {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "50",
-                  "Biological_material_longitude": "8.15",
-                  "Variety_name": "Actros"
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "characteristicType": {
+                      "@id": "",
+                      "annotationValue": "Organism",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0041",
+                      "comments": []
+                    }
+                  },
+                  "unit": null,
+                  "value": "Zea mays"
                 }
               ]
             },
             {
               "@id": "",
+              "name": "Genotype_C",
               "characteristics": [
                 {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "50",
-                  "Biological_material_longitude": "8.15",
-                  "Variety_name": "Actros"
-                }
-              ]
-            },
-            {
-              "@id": "",
-              "characteristics": [
-                {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "48.3333333333333",
-                  "Biological_material_longitude": "1.13333333333333",
-                  "Variety_name": "Actros"
-                }
-              ]
-            },
-            {
-              "@id": "",
-              "characteristics": [
-                {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "48.3333333333333",
-                  "Biological_material_longitude": "1.13333333333333",
-                  "Variety_name": "Actros"
-                }
-              ]
-            },
-            {
-              "@id": "",
-              "characteristics": [
-                {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "50",
-                  "Biological_material_longitude": "8.15",
-                  "Variety_name": "Actros"
-                }
-              ]
-            },
-            {
-              "@id": "",
-              "characteristics": [
-                {
-                  "Organism": "Triticum aestivum",
-                  "Genus": "Triticum",
-                  "Species": "aestivum",
-                  "Biological_material_latitude": "54.6666666666667",
-                  "Biological_material_longitude": "9.03333333333333",
-                  "Variety_name": "Actros"
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "characteristicType": {
+                      "@id": "",
+                      "annotationValue": "Organism",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0041",
+                      "comments": []
+                    }
+                  },
+                  "unit": null,
+                  "value": "Zea mays"
                 }
               ]
             }
           ],
-          "samples": [
+          "outputs": [
             {
               "@id": "",
+              "name": "Sample_1",
               "characteristics": [],
-              "factorValues": [],
+              "factorValues": [
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Fertilizer regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Fertilizer regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0149",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "High"
+                },
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Watering regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Watering regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0161",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "NORMAL"
+                }
+              ],
               "derivesFrom": []
             },
             {
               "@id": "",
+              "name": "Sample_2",
               "characteristics": [],
-              "factorValues": [],
+              "factorValues": [
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Fertilizer regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Fertilizer regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0149",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "Low"
+                },
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Watering regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Watering regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0161",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "NORMAL"
+                }
+              ],
               "derivesFrom": []
             },
             {
               "@id": "",
+              "name": "Sample_3",
               "characteristics": [],
-              "factorValues": [],
+              "factorValues": [
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Fertilizer regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Fertilizer regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0149",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "High"
+                },
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Watering regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Watering regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0161",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "DROUGHT"
+                }
+              ],
               "derivesFrom": []
             },
             {
               "@id": "",
+              "name": "Sample_4",
               "characteristics": [],
-              "factorValues": [],
+              "factorValues": [
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Fertilizer regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Fertilizer regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0149",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "Low"
+                },
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Watering regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Watering regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0161",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "DROUGHT"
+                }
+              ],
               "derivesFrom": []
             },
             {
               "@id": "",
+              "name": "Sample_5",
               "characteristics": [],
-              "factorValues": [],
-              "derivesFrom": []
-            },
-            {
-              "@id": "",
-              "characteristics": [],
-              "factorValues": [],
-              "derivesFrom": []
-            },
-            {
-              "@id": "",
-              "characteristics": [],
-              "factorValues": [],
-              "derivesFrom": []
-            },
-            {
-              "@id": "",
-              "characteristics": [],
-              "factorValues": [],
-              "derivesFrom": []
-            },
-            {
-              "@id": "",
-              "characteristics": [],
-              "factorValues": [],
+              "factorValues": [
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Fertilizer regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Fertilizer regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0149",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "Medium"
+                },
+                {
+                  "@id": "",
+                  "category": {
+                    "@id": "",
+                    "factorName": "Watering regime",
+                    "factorType": {
+                      "@id": "",
+                      "annotationValue": "Watering regime",
+                      "termSource": "MIAPPE",
+                      "termAccession": "MIAPPE:0161",
+                      "comments": []
+                    },
+                    "comments": []
+                  },
+                  "unit": {},
+                  "comments": [],
+                  "value": "NORMAL"
+                }
+              ],
               "derivesFrom": []
             }
           ],
-          "otherMaterials": []
+          "comments": []
+        }
+      ],
+      "assays": [
+        {
+          "@id": "",
+          "filename": "",
+          "measurementType": {
+            "annotationValue": "phenotyping",
+            "termSource": "DPBO",
+            "termAccession": "DPBO:1000224"
+          },
+          "technologyType": {
+            "annotationValue": "greenhouse",
+            "termSource": "AGRO",
+            "termAccession": "AGRO:00000363"
+          },
+          "technologyPlatform": "Lemna-Tec",
+          "dataFiles": [
+            {
+              "@id": "",
+              "name": "df.csv",
+              "type": "Raw Data File",
+              "comments": []
+            }
+          ],
+          "materials": {
+            "samples": [
+              {
+                "@id": "",
+                "name": "Sample_1",
+                "characteristics": [],
+                "factorValues": [],
+                "derivesFrom": []
+              },
+              {
+                "@id": "",
+                "name": "Sample_2",
+                "characteristics": [],
+                "factorValues": [],
+                "derivesFrom": []
+              },
+              {
+                "@id": "",
+                "name": "Sample_3",
+                "characteristics": [],
+                "factorValues": [],
+                "derivesFrom": []
+              },
+              {
+                "@id": "",
+                "name": "Sample_4",
+                "characteristics": [],
+                "factorValues": [],
+                "derivesFrom": []
+              },
+              {
+                "@id": "",
+                "name": "Sample_5",
+                "characteristics": [],
+                "factorValues": [],
+                "derivesFrom": []
+              }
+            ],
+            "otherMaterials": []
+          },
+          "characteristicCategories": [],
+          "unitCategories": [],
+          "processSequence": [
+            {
+              "@id": "",
+              "name": "Phenotyping",
+              "executesProtocol": {
+                "@id": "",
+                "name": "Phenotyping",
+                "protocolType": {
+                  "@id": "",
+                  "annotationValue": "phenotyping",
+                  "termSource": "DPBO",
+                  "termAccession": "DPBO:1000224",
+                  "comments": []
+                },
+                "description": "The plants were phenotyped in a Lemna-Tec greenhouse",
+                "uri": "",
+                "version": "MIAPPE v1.1",
+                "parameters": [
+                  {
+                    "@id": "",
+                    "parameterName": {
+                      "@id": "",
+                      "annotationValue": "camera angle",
+                      "termSource": "",
+                      "termAccession": "",
+                      "comments": []
+                    },
+                    "comments": [
+                      {
+                        "@id": "",
+                        "name": "value",
+                        "value": "90"
+                      },
+                      {
+                        "@id": "",
+                        "name": "unit",
+                        "value": {
+                          "@id": "",
+                          "annotationValue": "degree",
+                          "termSource": "UO",
+                          "termAccession": "UO:0000185",
+                          "comments": []
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "components": [
+                  {
+                    "componentName": "RGB-Camera",
+                    "componentType": {
+                      "annotationValue": "Camera Device",
+                      "termSource": "NCIT",
+                      "termAccession": "NCIT:C49858"
+                    },
+                    "comments": []
+                  }
+                ],
+                "comments": []
+              },
+              "parameterValues": [
+                {
+                  "category": {
+                    "@id": "",
+                    "parameterName": {
+                      "@id": "",
+                      "annotationValue": "camera angle",
+                      "termSource": "",
+                      "termAccession": "",
+                      "comments": []
+                    },
+                    "comments": [
+                      {
+                        "@id": "",
+                        "name": "value",
+                        "value": "90"
+                      },
+                      {
+                        "@id": "",
+                        "name": "unit",
+                        "value": {
+                          "@id": "",
+                          "annotationValue": "degree",
+                          "termSource": "UO",
+                          "termAccession": "UO:0000185",
+                          "comments": []
+                        }
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "@id": "",
+                    "annotationValue": "degree",
+                    "termSource": "UO",
+                    "termAccession": "UO:0000185",
+                    "comments": []
+                  },
+                  "value": "90"
+                }
+              ],
+              "performer": "",
+              "date": "",
+              "previousProcess": {},
+              "nextProcess": {},
+              "inputs": [
+                {
+                  "@id": "",
+                  "name": "Sample_1",
+                  "characteristics": [],
+                  "factorValues": [],
+                  "derivesFrom": []
+                },
+                {
+                  "@id": "",
+                  "name": "Sample_2",
+                  "characteristics": [],
+                  "factorValues": [],
+                  "derivesFrom": []
+                },
+                {
+                  "@id": "",
+                  "name": "Sample_3",
+                  "characteristics": [],
+                  "factorValues": [],
+                  "derivesFrom": []
+                },
+                {
+                  "@id": "",
+                  "name": "Sample_4",
+                  "characteristics": [],
+                  "factorValues": [],
+                  "derivesFrom": []
+                },
+                {
+                  "@id": "",
+                  "name": "Sample_5",
+                  "characteristics": [],
+                  "factorValues": [],
+                  "derivesFrom": []
+                }
+              ],
+              "outputs": [
+                {
+                  "@id": "",
+                  "name": "df.csv",
+                  "type": "Raw Data File",
+                  "comments": []
+                },
+                {
+                  "@id": "",
+                  "name": "df.csv",
+                  "type": "Raw Data File",
+                  "comments": []
+                },
+                {
+                  "@id": "",
+                  "name": "df.csv",
+                  "type": "Raw Data File",
+                  "comments": []
+                },
+                {
+                  "@id": "",
+                  "name": "df.csv",
+                  "type": "Raw Data File",
+                  "comments": []
+                },
+                {
+                  "@id": "",
+                  "name": "df.csv",
+                  "type": "Raw Data File",
+                  "comments": []
+                }
+              ],
+              "comments": []
+            }
+          ],
+          "comments": [
+            {
+              "@id": "",
+              "name": "Title",
+              "value": "2002 Phenotyping of Maize samples"
+            }
+          ]
+        }
+      ],
+      "factors": [],
+      "characteristicCategories": [],
+      "unitCategories": [],
+      "comments": [
+        {
+          "@id": "",
+          "name": "Study Country",
+          "value": "Germany"
         },
-        "processSequence": [
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2009",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "AND",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "47",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2010",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "SAU",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "12",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2009",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "SEL",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "1",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2010",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "SEL",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "48",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2010",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "SEL",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "1",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "18",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2010",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "JAN",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "1",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "20",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2010",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "JAN",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "13",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2009",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "SEL",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "44",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          },
-          {
-            "@id": "",
-            "name": "",
-            "executesProtocol": {
-              "@id": "",
-              "name": "Breedfides Growth",
-              "description": "",
-              "uri": "",
-              "version": "",
-              "parameters": [
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                }
-              ],
-              "components": [],
-              "comments": []
-            },
-            "parameterValues": [
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Year",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2009",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Location",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "WOH",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Repetition",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "2",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              },
-              {
-                "category": {
-                  "@id": "",
-                  "comments": [],
-                  "parameterName": {
-                    "@id": "",
-                    "annotationValue": "Block",
-                    "termSource": "",
-                    "termAccession": "",
-                    "comments": []
-                  }
-                },
-                "value": "58",
-                "unit": {
-                  "@id": "",
-                  "annotationValue": "",
-                  "termSource": "",
-                  "termAccession": "",
-                  "comments": []
-                }
-              }
-            ],
-            "performer": "",
-            "date": "",
-            "previousProcess": {},
-            "nextProcess": {},
-            "inputs": [],
-            "outputs": [],
-            "comments": []
-          }
-        ],
-        "assays": [],
-        "factors": [],
-        "characteristicCategories": [],
-        "unitCategories": [],
-        "comments": []
-      }
-    ],
-    "comments": []
-  }
+        {
+          "@id": "",
+          "name": "Study Contact Institution",
+          "value": "Corrensstrasse 3, D-06466 Stadt Seeland OT Gatersleben"
+        },
+        {
+          "@id": "",
+          "name": "Study Contact Institution ROR",
+          "value": "https://ror.org/02skbsp27"
+        },
+        {
+          "@id": "",
+          "name": "Study Longitude",
+          "value": "11.272326685750372"
+        },
+        {
+          "@id": "",
+          "name": "Study Latitude",
+          "value": "51.827494400000006"
+        },
+        {
+          "@id": "",
+          "name": "Study Experimental Site",
+          "value": "IPK Gatersleben"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "@id": "",
+      "name": "MIAPPE version",
+      "value": "1.1"
+    },
+    {
+      "@id": "",
+      "name": "License",
+      "value": "CC-BY-4.0"
+    }
+  ]
+}

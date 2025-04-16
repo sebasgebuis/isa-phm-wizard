@@ -4,12 +4,13 @@
     import { gitlab_response } from "@/stores/gitlab-api";
     import { isaObj } from "@/stores/isa";
     import Gitlab from "./Gitlab.svelte";
-    import { getIsaTab } from "@/lib/getIsaTab";
+    import { getIsaTab, toIsaTab } from "@/lib/getIsaTab";
     import { ArcInvestigation_fromJsonString } from "@nfdi4plants/arctrl/ISA/ISA.Json/Investigation";
     import { toFsWorkbook } from "@nfdi4plants/arctrl/ISA/ISA.Spreadsheet/ArcInvestigation";
     import { ARC } from "@nfdi4plants/arctrl";
     import { Xlsx } from "@fslab/fsspreadsheet";
     import { downloadZip } from "client-zip";
+    import Schemas from "@/lib/schemas";
 
     async function tryLogin(authentication) {
         let codeVerifier = generateCodeVerifier();
@@ -21,7 +22,21 @@
     }
 
     function convertToIsaTabArchive() {
-        getIsaTab($isaObj);
+        let ontoRef1 = Schemas.getObjectFromSchema('ontology_source_reference');
+        ontoRef1.name = 'OBI';
+        ontoRef1.file = 'http://bioportal.bioontology.org/ontologies/1123';
+        ontoRef1.version = '47893';
+        ontoRef1.description = 'Ontology for Biomedical Investigations';
+
+        let ontoRef2 = Schemas.getObjectFromSchema('ontology_source_reference');
+        ontoRef2.name = 'EFO';
+        ontoRef2.file = '';
+        ontoRef2.version = 'v 1.26';
+        ontoRef2.description = 'ArrayExpress Experimental Factor Ontology';
+
+        $isaObj['ontologySourceReferences'] = [ontoRef1, ontoRef2];
+
+        toIsaTab($isaObj);
     }
 
     function saveIsaAsJson() {
