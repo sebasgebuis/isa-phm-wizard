@@ -9,7 +9,8 @@
     "postbuild": "npm run copy",
     "preview": "vite preview",
     "__copy__": "copyfiles -u 1 data/**/* dist/data/",
-    "copy": "node ./copy_data_to_dist.cjs"
+    "copy": "node ./copy_data_to_dist.cjs",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
