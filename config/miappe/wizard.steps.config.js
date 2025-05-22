@@ -1,13 +1,13 @@
 window.steps = [
     {
-        title: 'Welcome to the MIAPPE Wizard.',
+        title: 'Welcome to the ISA-PHM Wizard.',
         text: [
-            'With this Wizard it is super easy to annotate measurements of your phenotyping experiment with MIAPPE-compliant metadata according to FAIR principles.',
+            'With this Wizard it is super easy to annotate measurements of your experiment with ISA-compliant metadata according to FAIR principles.',
             'Click on the Next button to start the metadata annotation of the results data of your experiments.'
         ]
     },
     {
-        title: 'Please provide the basic information of your Plant Phenotyping Project and when you submitted and published the Dataset.',
+        title: 'Please provide the basic information of your project and when you submitted and published the Dataset.',
         fields: [
             {
                 label: 'Project Title',
@@ -93,24 +93,6 @@ window.steps = [
                 explanation: 'DM-18'
             },
             {
-                label: 'Location Latitude',
-                type: 'text',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Latitude'
-                },
-                explanation: 'DM-19'
-            },
-            {
-                label: 'Location Longitude',
-                type: 'text',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Longitude'
-                },
-                explanation: 'DM-20'
-            },
-            {
                 label: 'ROR ID of your Institution',
                 type: 'ror',
                 isaMapping: {
@@ -154,33 +136,14 @@ window.steps = [
                       },
                     // protocolDescription: 'How the plants were grown up.',
                     protocolParameters: [ 
-                        {
-                            "@id": "",
-                            "annotationValue": "Light intensity",
-                            "termSource": "MIAPPE",
-                            "termAccession": "MIAPPE:0101",
-                            "comments": []
-                        }, {
-                            "@id": "",
-                            "annotationValue": "temperature day",
-                            "termSource": "DPBO",
-                            "termAccession": "DPBO:0000007",
-                            "comments": []
-                        },{
-                            "@id": "",
-                            "annotationValue": "temperature night",
-                            "termSource": "DPBO",
-                            "termAccession": "DPBO:0000008",
-                            "comments": []
-                        }
                     ]
                 }
             }
         ],
-        title: 'Please provide a brief summary of the Growth Conditions.',
+        title: 'Please provide a brief summary of the study.',
         fields: [
             {
-                label: 'Growth description',
+                label: 'Description',
                 type: 'textarea',
                 isaMapping: {
                     jsonPath: 'studies[0].protocols[0].description'
@@ -257,13 +220,11 @@ window.steps = [
             },
             {
                 label: 'Technology Platform',
-                type: 'text-select',
+                type: 'text',
                 isaMapping: {
                     jsonPath: 'studies[0].assays[0].technologyPlatform'
                 },
-                componentConfig: {
-                    options: ['Lemna-Tec', 'PhenoSphere', 'Field', 'Greenhouse']
-                }
+
             }
         ]
     },
@@ -288,7 +249,7 @@ window.steps = [
         title: 'Please select all Parameters corresponding to your phenotyping.',
         fields: [
             {
-                label: 'Phenotyping description',
+                label: 'Parameters description',
                 type: 'textarea',
                 isaMapping: {
                     jsonPath: 'studies[0].protocols[1].description'
