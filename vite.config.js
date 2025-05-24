@@ -9,7 +9,7 @@ export default defineConfig({
             emitCss: false
         })
     ],
-    base:"/isa-phm-wizard",
+    base:"/isa-phm-wizard/",
     resolve: {
         alias: {
             '@': path.resolve(__dirname, './src'),
