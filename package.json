@@ -2,7 +2,7 @@
   "name": "miappe-wizzard",
   "private": true,
   "version": "0.0.0",
-  "homepage":"https://sebasgebuis.github.io/isa-phm-wizard/",
+  "homepage": "https://sebasgebuis.github.io/isa-phm-wizard/",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,7 @@
     "preview": "vite preview",
     "__copy__": "copyfiles -u 1 data/**/* dist/data/",
     "copy": "node ./copy_data_to_dist.cjs",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
