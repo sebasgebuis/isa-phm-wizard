@@ -27,14 +27,14 @@ window.config = {
                 entity: 'investigation'
             },
             values: {
-                lastName : 'Max',
-                firstName : 'Mustermann',
+                lastName : 'John',
+                firstName : 'Doe',
                 midInitials : '',
-                email : 'mustermann@ipk-gatersleben.de',
+                email : 'John.doe@university.com',
                 phone : '1234',
                 fax : '7890',
-                address : 'Corrensstraße 3, 06646 Seeland',
-                affiliation : 'IPK Gatersleben'
+                address : 'Street 123',
+                affiliation : 'University'
             }
         }
     ]

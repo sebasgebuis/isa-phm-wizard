@@ -129,7 +129,7 @@
             {/if}
         </div>
         <div class="pure-u-19-24 v-center container border">
-            <Svelecte creatable createTransform={createHandler} bind:readSelection={selectedParameter} fetch={handleFetch} on:change={onChange} renderer={ontoRenderer} placeholder="Start writing parameters of your growth protocol"/>
+            <Svelecte creatable createTransform={createHandler} bind:readSelection={selectedParameter} fetch={handleFetch} on:change={onChange} renderer={ontoRenderer} placeholder="Start writing parameters of your protocol"/>
             {#if parameters && parameters.length > 0}
             <table style="width: 100%;">
                 <thead>

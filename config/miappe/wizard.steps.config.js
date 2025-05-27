@@ -125,11 +125,11 @@ window.steps = [
             {
                 type: 'addProtocol',
                 parameters: {
-                    protocolName: 'Growth',
+                    protocolName: ' ',
                     protocolVersion: 'MIAPPE v1.1',
                     protocolType: {
                         "@id": "",
-                        "annotationValue": "plant growth protocol",
+                        "annotationValue": " ",
                         "termSource": "DPBO",
                         "termAccession": "DPBO:1000164",
                         "comments": []
@@ -229,38 +229,40 @@ window.steps = [
         ]
     },
     {
+
         hooks: [
             {
                 type: 'addProtocol',
                 parameters: {
-                    protocolName: 'Phenotyping',
+                    protocolName: '',
                     protocolVersion: 'MIAPPE v1.1',
                     protocolType: {
                         "@id": "",
-                        "annotationValue": "phenotyping",
-                        "termSource": "DPBO",
-                        "termAccession": "DPBO:1000224",
+                        "annotationValue": "",
+                        "termSource": "",
+                        "termAccession": "",
                         "comments": []
                       },
                     // protocolParameters: ['Phenotyping method']
                 }
             }
         ],
-        title: 'Please select all Parameters corresponding to your phenotyping.',
+
+        title: 'Please select all Parameters corresponding to your protocol.',
         fields: [
             {
-                label: 'Parameters description',
+                label: 'Protocol name',
                 type: 'textarea',
                 isaMapping: {
-                    jsonPath: 'studies[0].protocols[1].description'
+                    jsonPath: 'studies[0].protocols[0].protocolName'
                 },
                 explanation: 'DM-67'
             },
             {
-                label: 'Protocol URI',
+                label: 'Protocol Description',
                 type: 'text',
                 isaMapping: {
-                    jsonPath: 'studies[0].protocols[1].uri'
+                    jsonPath: 'studies[0].protocols[0].description'
                 },
                 explanation: 'DM-66'
             },
@@ -268,7 +270,7 @@ window.steps = [
                 label: 'Protocol Parameters',
                 type: 'parameters',
                 isaMapping: {
-                    jsonPath: 'studies[0].protocols[1].parameters'
+                    jsonPath: 'studies[0].protocols[0].parameters'
                 },
                 explanation: 'DM-68'
             },
