@@ -16,13 +16,6 @@
         "description": {
             "type": "string"
         },
-        "uri": {
-            "type": "string",
-            "format": "uri"
-        },
-        "version": {
-            "type": "string"
-        },
         "parameters": {
             "type": "array",
             "items": {

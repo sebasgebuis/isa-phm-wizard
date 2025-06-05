@@ -7,32 +7,31 @@ window.steps = [
         ]
     },
     {
-        title: 'Please provide the basic information of your project and when you submitted and published the Dataset.',
+        title: 'Investigation - Please provide the basic information of your Investigation and when you submitted and published the Dataset.',
         fields: [
             {
-                label: 'Project Title',
+                label: 'Investigation Identifier',
                 type: 'text',
                 isaMapping: {
-                    jsonPath: 'title'
+                    jsonPath: 'identifier'
+                },
+                explanation: 'DM-2'
+            },
+            {
+                label: 'Investigation Title',
+                type: 'text',
+                isaMapping:{
+                    jsonPath:'title'
                 },
                 explanation: 'DM-3'
             },
             {
-                label: 'Project Description',
+                label: 'Investigation Description',
                 type: 'textarea',
                 isaMapping: {
                     jsonPath: 'description'
                 },
                 explanation: 'DM-4'
-            },
-            {
-                label: 'License',
-                type: 'license',
-                isaMapping: {
-                    jsonPath: 'comments',
-                    commentName: 'License'
-                },
-                explanation: 'DM-7'
             },
             {
                 label: 'Submission Date',
@@ -53,7 +52,7 @@ window.steps = [
         ]
     },
     {
-        title: 'Please provide the Authors of your Dataset and define their Contribution.',
+        title: 'Investigation - Please provide a list of Contacts relating to the investigation',
         component: 'People',
         jsonPath: 'people',
         componentConfig: {
@@ -62,10 +61,11 @@ window.steps = [
         }
     },
     {
-        title: 'Here you can provide publications related to your experiment.',
+        title: 'Investigation - Please provide any publications relating to your experiment.',
         level: 'Investigation',
         component: 'Publications',
-        jsonPath: 'publications'
+        jsonPath: 'publications',
+        explanation: 'DM-9'
     },
     {
         hooks: [
@@ -73,90 +73,59 @@ window.steps = [
                 type: 'addStudy'
             }
         ],
-        title: 'Please provide the Title and Location of your Study',
+        title: 'Study - Please provide the general information about your study',
         fields: [
             {
-                label: 'Study Title',
+                label: 'Study Identifier',
                 type: 'text',
                 isaMapping: {
-                    jsonPath: 'studies[0].title'
+                    jsonPath: 'studies[0].identifier'
                 },
                 explanation: 'DM-12'
             },
             {
-                label: 'Location',
-                type: 'location',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Experimental Site'
-                },
-                explanation: 'DM-18'
-            },
-            {
-                label: 'ROR ID of your Institution',
-                type: 'ror',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Contact Institution ROR'
+                label: 'Study Title',
+                type: 'text',
+                isaMapping:{
+                    jsonPath: 'studies[0].title'
                 }
             },
             {
-                label: 'Institution Contact Address',
+                label: 'Study Description',
                 type: 'text',
                 isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Contact Institution'
+                    jsonPath: 'studies[0].description'
                 },
-                explanation: 'DM-16'
             },
-            {
-                label: 'Country',
-                type: 'text',
-                isaMapping: {
-                    jsonPath: 'studies[0].comments',
-                    commentName: 'Study Country'
-                },
-                explanation: 'DM-17'
-            }
         ]
-    },    
+    },   
     {
         hooks: [
             {
                 type: 'addProtocol',
                 parameters: {
                     protocolName: ' ',
-                    protocolVersion: 'MIAPPE v1.1',
-                    protocolType: {
-                        "@id": "",
-                        "annotationValue": " ",
-                        "termSource": "DPBO",
-                        "termAccession": "DPBO:1000164",
-                        "comments": []
-                      },
-                    // protocolDescription: 'How the plants were grown up.',
                     protocolParameters: [ 
                     ]
                 }
             }
         ],
-        title: 'Please provide a brief summary of the study.',
+        title: 'Study Protocol - Please describe the protocol of the study.',
         fields: [
             {
-                label: 'Description',
+                label: 'Protocol Name',
+                type: 'text',
+                isaMapping: {
+                    jsonPath: 'studies[0].protocols[0].name'
+                }
+            },
+            {
+                label: 'Protocol Description',
                 type: 'textarea',
                 isaMapping: {
                     jsonPath: 'studies[0].protocols[0].description'
                 },
                 explanation: 'DM-67'
-            },
-            {
-                label: 'Protocol URI',
-                type: 'text',
-                isaMapping: {
-                    jsonPath: 'studies[0].protocols[0].uri'
-                },
-                explanation: 'DM-66'
             },
             {
                 label: 'Protocol Parameters',
@@ -177,10 +146,10 @@ window.steps = [
         ]
     },
     {
-        title: 'Please upload the Material used in your Study.',
-        component: 'StudyProcesses',
+        title: 'Study Publications - Please upload the publications used in your Study.',
+        component: 'Publications',
         level: 'Study',
-        jsonPath: 'studies[0]',
+        jsonPath: 'studies[0].publications',
         componentConfig: {
 
         }
@@ -194,10 +163,10 @@ window.steps = [
                 }
             }
         ],
-        title: 'Please provide the information on the experiments of your Study.',
+        title: 'Assay - Please provide the information on the experiments of your Assay.',
         fields: [
             {
-                label: 'Experiment Title',
+                label: 'Assay id',
                 type: 'text',
                 isaMapping: {
                     jsonPath: 'studies[0].assays[0].comments',
@@ -224,73 +193,23 @@ window.steps = [
                 isaMapping: {
                     jsonPath: 'studies[0].assays[0].technologyPlatform'
                 },
-
-            }
-        ]
-    },
-    {
-
-        hooks: [
-            {
-                type: 'addProtocol',
-                parameters: {
-                    protocolName: '',
-                    protocolVersion: 'MIAPPE v1.1',
-                    protocolType: {
-                        "@id": "",
-                        "annotationValue": "",
-                        "termSource": "",
-                        "termAccession": "",
-                        "comments": []
-                      },
-                    // protocolParameters: ['Phenotyping method']
-                }
-            }
-        ],
-
-        title: 'Please select all Parameters corresponding to your protocol.',
-        fields: [
-            {
-                label: 'Protocol name',
-                type: 'textarea',
-                isaMapping: {
-                    jsonPath: 'studies[0].protocols[0].protocolName'
-                },
-                explanation: 'DM-67'
             },
             {
-                label: 'Protocol Description',
+                label: 'Data File Name',
                 type: 'text',
                 isaMapping: {
-                    jsonPath: 'studies[0].protocols[0].description'
-                },
-                explanation: 'DM-66'
+                    jsonPath: 'studies[0].assays[0].dataFiles'
+                }
+                
             },
             {
-                label: 'Protocol Parameters',
-                type: 'parameters',
-                isaMapping: {
-                    jsonPath: 'studies[0].protocols[0].parameters'
-                },
-                explanation: 'DM-68'
-            },
-            {
-                label: 'Protocol Components',
-                type: 'components',
-                isaMapping: {
-                    jsonPath: 'studies[0].protocols[1].components'
-                },
-                explanation: 'DM-69'
+                label: 'Assay identifier',
+                type: 'text',
+                isaMapping:{
+                    jsonPath: 'studies[0].assays[0].identifier'
+                }
             }
         ]
     },
-    {
-        title: 'Please upload the results of your Study.',
-        component: 'AssayProcesses',
-        level: 'Assay',
-        jsonPath: 'studies[0].assays[0]',
-        componentConfig: {
-
-        }
-    }
+    
 ];

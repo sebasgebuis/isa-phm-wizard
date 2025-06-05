@@ -11,6 +11,7 @@
   "type": "object",
   "properties": {
     "@id": { "type": "string", "format": "uri" },
+    "identifier": {"type": "string"},
     "filename" : { "type" : "string" },
     "measurementType" : {
       "$ref": "ontology_annotation_schema.json#"
@@ -23,43 +24,6 @@
       "type": "array",
       "items" : {
         "$ref": "data_schema.json#"
-      }
-    },
-    "materials": {
-      "type": "object",
-      "properties": {
-        "samples": {
-          "type": "array",
-          "items": {
-            "$ref": "sample_schema.json#"
-          }
-        },
-        "otherMaterials": {
-          "type": "array",
-          "items": {
-            "$ref": "material_schema.json#"
-          }
-        }
-      }
-    },
-    "characteristicCategories": {
-      "description": "List of all the characteristics categories (or material attributes) defined in the study, used to avoid duplication of their declaration when each material_attribute_value is created. ",
-      "type": "array",
-      "items": {
-        "$ref": "material_attribute_schema.json#"
-      }
-    },
-    "unitCategories": {
-      "description": "List of all the units defined in the study, used to avoid duplication of their declaration when each value is created. ",
-      "type": "array",
-      "items": {
-        "$ref": "ontology_annotation_schema.json#"
-      }
-    },
-    "processSequence": {
-      "type": "array",
-      "items" : {
-        "$ref" : "process_schema.json#"
       }
     },
     "comments" : {
