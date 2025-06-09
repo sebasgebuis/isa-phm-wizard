@@ -84,6 +84,7 @@ let currentStep = 0;
 const hooks = {
     'addStudy': addStudy,
     'addProtocol': addProtocol,
+    'addAssayProtocol' : addAssayProtocol,
     'addAssay': addAssay,
 }
 
@@ -139,6 +140,50 @@ async function addProtocol(params) {
     $isaObj = $isaObj;
 }
 
+async function addAssayProtocol(params) {
+    if (!params) {
+        alert('Error: Using the addAssayProtocol hook without parameters is not allowed. Please correct the steps configuration!');
+        return false;
+    }
+
+
+    let emptyProtocol = Schemas.getObjectFromSchema('protocol');
+    emptyProtocol.protocolType = Schemas.getObjectFromSchema('ontology_annotation');
+    
+    emptyProtocol.name = params?.protocolName? params.protocolName : '';
+    emptyProtocol.description = params?.protocolDescription? params.protocolDescription : '';
+    emptyProtocol.version = params?.protocolVersion? params.protocolVersion : '';
+    emptyProtocol.protocolType= params?.protocolType?? params.protocolType;
+    
+    if (params.protocolParameters !== undefined) {
+        for (let parameterName of params.protocolParameters) {
+            let emptyParameter = Schemas.getObjectFromSchema('protocol_parameter');
+            emptyParameter.parameterName = parameterName;
+            
+            let comment = Schemas.getObjectFromSchema('comment');
+            comment.name = 'value';
+            comment.value = '';
+            emptyParameter.comments = [comment];
+            
+            let commentDeleteable = Schemas.getObjectFromSchema('comment');
+            commentDeleteable.name = 'deletable';
+            commentDeleteable.value = 'false';
+            emptyParameter.comments = [...emptyParameter.comments, commentDeleteable];
+
+            let commentUnit = Schemas.getObjectFromSchema('comment');
+            commentUnit.name = 'unit';
+            commentUnit.value = Schemas.getObjectFromSchema('ontology_annotation');
+            commentUnit.value.annotationValue = '';
+            emptyParameter.comments = [...emptyParameter.comments, commentUnit];
+            
+            emptyProtocol.parameters = [...emptyProtocol.parameters, emptyParameter];
+
+        }
+    }
+    
+    $isaObj['studies'][0]['assays'][0]['protocols'] = [ ...$isaObj['studies'][0]['assays'][0]['protocols'], emptyProtocol];
+    $isaObj = $isaObj
+}
 
 async function initFirstStep() {
     executeStepHooks(0);

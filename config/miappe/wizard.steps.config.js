@@ -166,7 +166,7 @@ window.steps = [
         title: 'Assay - Please provide the information on the experiments of your Assay.',
         fields: [
             {
-                label: 'Assay id',
+                label: 'Assay Title',
                 type: 'text',
                 isaMapping: {
                     jsonPath: 'studies[0].assays[0].comments',
@@ -211,5 +211,51 @@ window.steps = [
             }
         ]
     },
+    {
+        hooks: [
+            {
+                type: 'addAssayProtocol',
+                parameters: {
+                    protocolName: '',
+                    protocolParameters: [ 
+                    ]
+                }
+            }
+        ],
+        title: 'Assay Protocol - Please add your assay protocols',
+        fields: [
+            {
+                label: 'Protocol Name',
+                type: 'text',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].protocols[0].name'
+                }
+            },
+            {
+                label: 'Protocol Description',
+                type: 'textarea',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].protocols[0].description'
+                },
+                explanation: 'DM-67'
+            },
+            {
+                label: 'Protocol Parameters',
+                type: 'parameters',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].protocols[0].parameters'
+                },
+                explanation: 'DM-68'
+            },
+            {
+                label: 'Protocol Components',
+                type: 'components',
+                isaMapping: {
+                    jsonPath: 'studies[0].assays[0].protocols[0].components'
+                },
+                explanation: 'DM-69'
+            }
+        ]
+    }
     
 ];

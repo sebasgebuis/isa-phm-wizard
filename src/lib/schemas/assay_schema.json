@@ -8,18 +8,36 @@
     "@base": "https://purl.org/isaterms/",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
+
+
   "type": "object",
+
+
   "properties": {
+
     "@id": { "type": "string", "format": "uri" },
+
     "identifier": {"type": "string"},
+
     "filename" : { "type" : "string" },
+
     "measurementType" : {
       "$ref": "ontology_annotation_schema.json#"
     },
+
     "technologyType" : {
           "$ref": "ontology_annotation_schema.json#"
     },
+
+     "protocols" : {
+      "type": "array",
+      "items" : {
+        "$ref": "protocol_schema.json#"
+      }
+    },
+
     "technologyPlatform" : { "type" : "string"},
+
     "dataFiles" : {
       "type": "array",
       "items" : {
